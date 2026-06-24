@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started – Agentic Aids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo"><span class="logo-bracket">&lt;</span>Agentic<span class="logo-dot">.</span>Aids<span class="logo-bracket">/&gt;</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="tools.html" class="nav-link">Tools</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="login.html" class="nav-link nav-login">Login</a></li>
+        <li><a href="get-started.html" class="nav-link nav-cta active">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="section-tag">// Let's build</p>
+      <h1 class="section-title">Get Started</h1>
+      <p>Tell us about your business and we'll get the ball rolling on your new website.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="get-started-grid">
+      <!-- Form -->
+      <div>
+        <form id="getStartedForm">
+          <div class="form-group">
+            <label for="gsName">Your Name *</label>
+            <input type="text" id="gsName" required placeholder="John Doe">
+            <p class="form-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="gsBusiness">Business Name *</label>
+            <input type="text" id="gsBusiness" required placeholder="Doe's Coffee Shop">
+            <p class="form-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="gsEmail">Email Address *</label>
+            <input type="email" id="gsEmail" required placeholder="john@example.com">
+            <p class="form-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="gsPhone">Phone Number</label>
+            <input type="tel" id="gsPhone" placeholder="(555) 123-4567">
+            <p class="form-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="gsPlan">Interested Plan</label>
+            <select id="gsPlan">
+              <option value="">Select a plan (optional)</option>
+              <option value="starter">Starter – $999</option>
+              <option value="growth">Growth – $2,499</option>
+              <option value="premium">Premium – $4,999</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gsDetails">Project Details *</label>
+            <textarea id="gsDetails" required placeholder="Tell us about your business, what you need, and any ideas you have for your website..."></textarea>
+            <p class="form-error"></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Submit Request →</button>
+        </form>
+        <div class="form-success" id="getStartedSuccess">
+          <h3>Request Submitted!</h3>
+          <p>Thanks for your interest! We'll review your details and reach out within 1-2 business days to schedule a free consultation.</p>
+        </div>
+      </div>
+
+      <!-- Process Timeline -->
+      <div>
+        <h3 style="font-family:var(--font-heading); margin-bottom:28px;">How Our Process Works</h3>
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-content">
+              <h4>Consultation</h4>
+              <p>We hop on a free call to understand your business, goals, and vision for your website.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-content">
+              <h4>Design</h4>
+              <p>We create mockups and wireframes for your review, iterating until the design is perfect.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-content">
+              <h4>Build</h4>
+              <p>Our engineers develop your site with clean code, responsive layouts, and all requested features.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-content">
+              <h4>Launch</h4>
+              <p>After final testing and your approval, we deploy your site to the world.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">5</div>
+            <div class="timeline-content">
+              <h4>Maintenance</h4>
+              <p>We provide ongoing support, updates, and optimization to keep your site performing at its best.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><span class="logo-bracket">&lt;</span>Agentic<span class="logo-dot">.</span>Aids<span class="logo-bracket">/&gt;</span></a>
+        <p>Building custom websites that help small businesses reach more customers online.</p>
+      </div>
+      <div class="footer-links"><h4>Navigation</h4><ul><li><a href="../index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="footer-links"><h4>Company</h4><ul><li><a href="get-started.html">Get Started</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Client Login</a></li></ul></div>
+      <div class="footer-contact"><h4>Get In Touch</h4><p>hello@agenticaids.com</p><p>(555) 123-4567</p><div class="social-links"><a href="#" aria-label="Twitter">𝕏</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">GH</a></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Agentic Aids. All rights reserved.</p></div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
