@@ -41,27 +41,27 @@
         <form id="getStartedForm">
           <div class="form-group">
             <label for="gsName">Your Name *</label>
-            <input type="text" id="gsName" required placeholder="John Doe">
+            <input type="text" id="gsName" name="name" required placeholder="John Doe">
             <p class="form-error"></p>
           </div>
           <div class="form-group">
             <label for="gsBusiness">Business Name *</label>
-            <input type="text" id="gsBusiness" required placeholder="Doe's Coffee Shop">
+            <input type="text" id="gsBusiness" name="business" required placeholder="Doe's Coffee Shop">
             <p class="form-error"></p>
           </div>
           <div class="form-group">
             <label for="gsEmail">Email Address *</label>
-            <input type="email" id="gsEmail" required placeholder="john@example.com">
+            <input type="email" id="gsEmail" name="email" required placeholder="john@example.com">
             <p class="form-error"></p>
           </div>
           <div class="form-group">
             <label for="gsPhone">Phone Number</label>
-            <input type="tel" id="gsPhone" placeholder="(555) 123-4567">
+            <input type="tel" id="gsPhone" name="phone" placeholder="(555) 123-4567">
             <p class="form-error"></p>
           </div>
           <div class="form-group">
             <label for="gsPlan">Interested Plan</label>
-            <select id="gsPlan">
+            <select id="gsPlan" name="plan">
               <option value="">Select a plan (optional)</option>
               <option value="starter">Starter – $999</option>
               <option value="growth">Growth – $2,499</option>
@@ -71,7 +71,7 @@
           </div>
           <div class="form-group">
             <label for="gsDetails">Project Details *</label>
-            <textarea id="gsDetails" required placeholder="Tell us about your business, what you need, and any ideas you have for your website..."></textarea>
+            <textarea id="gsDetails" name="details" required placeholder="Tell us about your business, what you need, and any ideas you have for your website..."></textarea>
             <p class="form-error"></p>
           </div>
           <button type="submit" class="btn btn-primary btn-lg">Submit Request →</button>
