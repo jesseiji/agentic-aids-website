@@ -177,6 +177,27 @@ function initGetStartedForm() {
     });
 
     if (allValid) {
+      // Build mailto link with form data and send to EMAIL_RECEIVER
+      const recipient = typeof EMAIL_RECEIVER !== 'undefined' ? EMAIL_RECEIVER : 'hello@agenticaids.com';
+      const name = document.getElementById('gsName').value;
+      const business = document.getElementById('gsBusiness').value;
+      const email = document.getElementById('gsEmail').value;
+      const phone = document.getElementById('gsPhone').value || 'Not provided';
+      const plan = document.getElementById('gsPlan').value || 'Not selected';
+      const details = document.getElementById('gsDetails').value;
+
+      const subject = encodeURIComponent(`New Project Request from ${name} - ${business}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Business: ${business}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}\n` +
+        `Plan: ${plan}\n\n` +
+        `Project Details:\n${details}`
+      );
+
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
       form.style.display = 'none';
       const success = document.getElementById('getStartedSuccess');
       if (success) success.classList.add('show');
