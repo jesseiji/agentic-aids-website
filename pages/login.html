@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – Agentic Aids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo"><span class="logo-bracket">&lt;</span>Agentic<span class="logo-dot">.</span>Aids<span class="logo-bracket">/&gt;</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="tools.html" class="nav-link">Tools</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="login.html" class="nav-link nav-login active">Login</a></li>
+        <li><a href="get-started.html" class="nav-link nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Client Portal</h2>
+      <p class="auth-subtitle">Log in or create an account to manage your projects.</p>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="loginTab">Log In</button>
+        <button class="auth-tab" id="signupTab">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form active" id="loginForm">
+        <div id="loginError" style="display:none; color:#ff5c5c; font-size:0.85rem; margin-bottom:16px; padding:10px; background:rgba(255,92,92,0.08); border-radius:8px;"></div>
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" required placeholder="you@example.com">
+          <p class="form-error"></p>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="password-toggle">
+            <input type="password" id="loginPassword" required placeholder="Enter your password" data-minlength="6">
+            <button type="button" class="pw-toggle">show</button>
+          </div>
+          <p class="form-error"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In →</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form class="auth-form" id="signupForm">
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" required placeholder="John Doe">
+          <p class="form-error"></p>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" required placeholder="you@example.com">
+          <p class="form-error"></p>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <div class="password-toggle">
+            <input type="password" id="signupPassword" required placeholder="Min 6 characters" data-minlength="6">
+            <button type="button" class="pw-toggle">show</button>
+          </div>
+          <p class="form-error"></p>
+        </div>
+        <div class="form-group">
+          <label for="signupConfirm">Confirm Password</label>
+          <div class="password-toggle">
+            <input type="password" id="signupConfirm" required placeholder="Re-enter password">
+            <button type="button" class="pw-toggle">show</button>
+          </div>
+          <p class="form-error"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Account →</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
