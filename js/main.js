@@ -152,6 +152,20 @@ function initContactForm() {
     });
 
     if (allValid) {
+      const recipient = typeof EMAIL_RECEIVER !== 'undefined' ? EMAIL_RECEIVER : 'hello@agenticaids.com';
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const message = document.getElementById('contactMessage').value;
+
+      const subject = encodeURIComponent(`Contact Form Message from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n\n` +
+        `Message:\n${message}`
+      );
+
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
       form.style.display = 'none';
       const success = document.getElementById('contactSuccess');
       if (success) success.classList.add('show');
