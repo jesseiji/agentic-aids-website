@@ -152,23 +152,22 @@ function initContactForm() {
     });
 
     if (allValid) {
-      const recipient = typeof EMAIL_RECEIVER !== 'undefined' ? EMAIL_RECEIVER : 'hello@agenticaids.com';
-      const name = document.getElementById('contactName').value;
-      const email = document.getElementById('contactEmail').value;
-      const message = document.getElementById('contactMessage').value;
+      const code = typeof FORMSPREE_CODE !== 'undefined' ? FORMSPREE_CODE : '';
+      const formData = new FormData(form);
 
-      const subject = encodeURIComponent(`Contact Form Message from ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Email: ${email}\n\n` +
-        `Message:\n${message}`
-      );
-
-      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-      form.style.display = 'none';
-      const success = document.getElementById('contactSuccess');
-      if (success) success.classList.add('show');
+      fetch(`https://formspree.io/f/${code}`, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          form.style.display = 'none';
+          const success = document.getElementById('contactSuccess');
+          if (success) success.classList.add('show');
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(() => alert('Something went wrong. Please try again.'));
     }
   });
 }
@@ -191,30 +190,22 @@ function initGetStartedForm() {
     });
 
     if (allValid) {
-      // Build mailto link with form data and send to EMAIL_RECEIVER
-      const recipient = typeof EMAIL_RECEIVER !== 'undefined' ? EMAIL_RECEIVER : 'hello@agenticaids.com';
-      const name = document.getElementById('gsName').value;
-      const business = document.getElementById('gsBusiness').value;
-      const email = document.getElementById('gsEmail').value;
-      const phone = document.getElementById('gsPhone').value || 'Not provided';
-      const plan = document.getElementById('gsPlan').value || 'Not selected';
-      const details = document.getElementById('gsDetails').value;
+      const code = typeof FORMSPREE_CODE !== 'undefined' ? FORMSPREE_CODE : '';
+      const formData = new FormData(form);
 
-      const subject = encodeURIComponent(`New Project Request from ${name} - ${business}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Business: ${business}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}\n` +
-        `Plan: ${plan}\n\n` +
-        `Project Details:\n${details}`
-      );
-
-      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-
-      form.style.display = 'none';
-      const success = document.getElementById('getStartedSuccess');
-      if (success) success.classList.add('show');
+      fetch(`https://formspree.io/f/${code}`, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          form.style.display = 'none';
+          const success = document.getElementById('getStartedSuccess');
+          if (success) success.classList.add('show');
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(() => alert('Something went wrong. Please try again.'));
     }
   });
 }
