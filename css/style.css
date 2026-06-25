@@ -1068,11 +1068,12 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 8px;
     transform: translateX(100%);
     transition: transform var(--transition);
     z-index: 999;
@@ -1083,8 +1084,24 @@ img {
   }
 
   .nav-link {
-    font-size: 1.1rem;
-    padding: 14px 24px;
+    font-size: 1.2rem;
+    padding: 16px 32px;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(0, 212, 255, 0.06);
+  }
+
+  .nav-cta {
+    margin-top: 8px;
+    width: 80%;
+    text-align: center;
+    padding: 16px 32px;
+    font-size: 1.2rem;
   }
 
   .hero {
@@ -1098,11 +1115,11 @@ img {
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
   .hero-stats {
@@ -1342,15 +1359,15 @@ img {
   }
 
   .hero-title {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .hero-tag {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 28px;
   }
 
@@ -1378,19 +1395,19 @@ img {
   }
 
   .stat-number {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .section-tag {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-bottom: 24px;
   }
 
@@ -1413,16 +1430,16 @@ img {
   }
 
   .cta-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .cta-section p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .btn-lg {
     padding: 16px 28px;
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .footer {
@@ -1431,6 +1448,12 @@ img {
 
   .footer-links h4,
   .footer-contact h4 {
+    font-size: 1.05rem;
+  }
+
+  .footer-links a,
+  .footer-contact p,
+  .footer-brand p {
     font-size: 1rem;
   }
 
@@ -1439,11 +1462,11 @@ img {
   }
 
   .page-header .section-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .page-header p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .get-started-grid {
@@ -1475,12 +1498,12 @@ img {
   }
 
   .auth-card h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .portfolio-image {
     height: 180px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .portfolio-info {
@@ -1488,7 +1511,11 @@ img {
   }
 
   .portfolio-info h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+  }
+
+  .portfolio-info p {
+    font-size: 1rem;
   }
 
   .form-group input,
@@ -1499,10 +1526,36 @@ img {
   }
 
   .form-group label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .service-card h3,
+  .tool-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .service-card p,
+  .tool-card p {
+    font-size: 1rem;
+  }
+
+  .pricing-card h3 {
     font-size: 1.2rem;
+  }
+
+  .pricing-features li {
+    font-size: 1rem;
+  }
+
+  .contact-info-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .contact-info-card p {
+    font-size: 1rem;
   }
 }
